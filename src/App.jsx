@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Game from "./pages/Game";
 import NotFound from "./pages/NotFound";
-
+import './index.css'
 
 export default function App() {
   return (
