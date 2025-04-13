@@ -707,7 +707,6 @@ export default function HadriansCrossword() {
           </div>
         ) : (
           <div className="flex-1 overflow-auto p-4">
-            <div className="flex flex-col md:flex-row md:space
             <div className="flex flex-col md:flex-row md:space-x-4">
               {/* Crossword Grid */}
               <div className="w-full md:w-3/5 overflow-auto">
