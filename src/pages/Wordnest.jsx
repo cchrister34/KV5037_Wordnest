@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-export default function HadriansCrossword() {
+export default function Wordnest() {
   const [page, setPage] = useState('home');
   const [difficulty, setDifficulty] = useState('medium');
   const [theme, setTheme] = useState('light');
@@ -21,7 +21,7 @@ export default function HadriansCrossword() {
     easy: {
       // Using blank spaces for empty cells and letters for the answer template
       grid: [
-        [' ', ' ', ' ', 'B', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'B', ' ', ' ', ' '],  
         ['A', 'L', 'N', 'W', 'I', 'C', 'K'],
         [' ', ' ', ' ', 'M', ' ', ' ', ' '],
         ['T', 'Y', 'N', 'E', ' ', ' ', ' '],
@@ -578,8 +578,8 @@ export default function HadriansCrossword() {
   // Render functions for each page
   const renderHomePage = () => (
     <div className={`flex flex-col h-screen items-center justify-center p-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-800'}`}>
-      <h1 className="text-4xl font-bold mb-6">Hadrian's Crossword</h1>
-      <p className="text-xl mb-8 text-center">Test your knowledge of North East England's monuments, towns, and football players!</p>
+      <h1 className="text-4xl font-bold mb-6">Wordnest</h1>
+      <p className="text-xl mb-8 text-center">A fun crossword styled word game!</p>
       
       <div className="flex flex-col space-y-4 w-full max-w-md">
         <button 
