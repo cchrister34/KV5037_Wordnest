@@ -19,95 +19,100 @@ export default function HadriansCrossword() {
   // Properly structured crossword puzzles
   const puzzles = {
     easy: {
-      // Using blank spaces for empty cells and letters for the answer template
       grid: [
-        [' ', ' ', ' ', 'B', ' ', ' ', ' '],
-        ['A', 'L', 'N', 'W', 'I', 'C', 'K'],
-        [' ', ' ', ' ', 'M', ' ', ' ', ' '],
-        ['T', 'Y', 'N', 'E', ' ', ' ', ' '],
-        [' ', ' ', ' ', 'U', ' ', ' ', ' '],
-        [' ', 'D', 'U', 'R', 'H', 'A', 'M'],
-        [' ', ' ', ' ', 'G', ' ', ' ', ' '],
-        [' ', ' ', ' ', 'H', ' ', ' ', ' ']
+        ['W', 'H', 'I', 'T', 'L', 'E', 'Y', ' ', ' '],
+        ['A', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        ['L', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        ['L', ' ', ' ', 'A', 'L', 'N', 'W', 'I', 'C', 'K'],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'T', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'Y', ' ', ' ', ' ', ' ', ' '],
+        [' ', 'D', 'U', 'N', 'E', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'E', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
       ],
       cellNumbers: {
-        '0-3': 1,
-        '1-0': 2,
-        '3-0': 3,
-        '5-1': 4
+        '0-0': 1,
+        '3-3': 2,
+        '7-1': 3
       },
       clues: {
         across: {
-          2: { num: 2, clue: "Castle town and county seat of Northumberland", answer: "ALNWICK", row: 1, col: 0 },
-          3: { num: 3, clue: "River flowing through Newcastle", answer: "TYNE", row: 3, col: 0 },
-          4: { num: 4, clue: "Cathedral city in County Durham", answer: "DURHAM", row: 5, col: 1 }
+          1: { num: 1, clue: "Coastal bay in North Tyneside", answer: "WHITLEY", row: 0, col: 0 },
+          2: { num: 2, clue: "Castle town and county seat of Northumberland", answer: "ALNWICK", row: 3, col: 3 },
+          3: { num: 3, clue: "Sandy beach in Northumberland", answer: "DUNE", row: 7, col: 1 }
         },
         down: {
-          1: { num: 1, clue: "Historic castle on the Northumberland coast", answer: "BAMBURGH", row: 0, col: 3 }
+          1: { num: 1, clue: "Historic defensive structure along the border", answer: "WALL", row: 0, col: 0 },
+          2: { num: 2, clue: "River flowing through Newcastle", answer: "TYNE", row: 3, col: 3 }
         }
       }
     },
     medium: {
       grid: [
-        [' ', ' ', ' ', ' ', ' ', 'N', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', 'E', ' ', ' '],
-        ['G', 'A', 'T', 'E', 'S', 'H', 'E', 'A', 'D'],
-        [' ', ' ', ' ', ' ', ' ', 'C', ' ', ' '],
+        [' ', ' ', ' ', ' ', 'G', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', 'A', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', 'T', ' ', ' ', ' ', ' '],
         [' ', ' ', 'S', 'H', 'E', 'A', 'R', 'E', 'R'],
-        [' ', ' ', ' ', ' ', ' ', 'S', ' ', ' '],
-        [' ', ' ', ' ', 'S', 'U', 'N', 'D', 'E', 'R', 'L', 'A', 'N', 'D'],
-        [' ', ' ', ' ', ' ', ' ', 'L', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', 'E', ' ', ' ']
+        [' ', ' ', ' ', ' ', 'S', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', 'H', ' ', ' ', ' ', ' '],
+        [' ', 'T', 'Y', 'N', 'E', 'M', 'O', 'U', 'T', 'H'],
+        [' ', ' ', ' ', ' ', 'A', ' ', ' ', ' ', ' '],
+        [' ', 'S', 'U', 'N', 'D', 'E', 'R', 'L', 'A', 'N', 'D'],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
       ],
       cellNumbers: {
-        '0-5': 1,
-        '2-0': 2,
-        '4-2': 3,
-        '6-3': 4
+        '0-4': 1,
+        '3-2': 2,
+        '6-1': 3,
+        '8-1': 4
       },
       clues: {
         across: {
-          2: { num: 2, clue: "Town connected to Newcastle by seven bridges", answer: "GATESHEAD", row: 2, col: 0 },
-          3: { num: 3, clue: "Newcastle United's legendary striker Alan", answer: "SHEARER", row: 4, col: 2 },
-          4: { num: 4, clue: "City known for its automotive industry", answer: "SUNDERLAND", row: 6, col: 3 }
+          2: { num: 2, clue: "Newcastle United's legendary striker Alan", answer: "SHEARER", row: 3, col: 2 },
+          3: { num: 3, clue: "Coastal town where the Tyne meets the sea", answer: "TYNEMOUTH", row: 6, col: 1 },
+          4: { num: 4, clue: "City known for its automotive industry", answer: "SUNDERLAND", row: 8, col: 1 }
         },
         down: {
-          1: { num: 1, clue: "Historic structure built by Romans in 122 AD", answer: "NEWCASTLE", row: 0, col: 5 }
+          1: { num: 1, clue: "Town connected to Newcastle by seven bridges", answer: "GATESHEAD", row: 0, col: 4 }
         }
       }
     },
     hard: {
       grid: [
-        [' ', ' ', ' ', ' ', ' ', ' ', 'A', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'N', ' ', ' '],
+        [' ', ' ', ' ', 'B', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'A', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'M', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'B', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'U', ' ', ' ', ' ', ' ', ' '],
         ['H', 'A', 'D', 'R', 'I', 'A', 'N', 'S', 'W', 'A', 'L', 'L'],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'G', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'E', ' ', ' '],
-        [' ', ' ', 'B', 'A', 'M', 'B', 'U', 'R', 'G', 'H'],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'F', ' ', ' '],
-        ['T', 'Y', 'N', 'E', 'M', 'O', 'U', 'T', 'H'],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'R', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'T', ' ', ' '],
-        [' ', ' ', ' ', ' ', ' ', ' ', 'H', ' ', ' ']
+        [' ', ' ', ' ', 'G', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'H', ' ', ' ', ' ', ' ', ' '],
+        ['N', 'E', 'W', 'C', 'A', 'S', 'T', 'L', 'E'],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        ['T', 'Y', 'N', 'E', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
       ],
       cellNumbers: {
-        '0-6': 1,
-        '2-0': 2,
-        '5-2': 3,
-        '7-0': 4
+        '0-3': 1,
+        '5-0': 2,
+        '8-0': 3,
+        '10-0': 4
       },
       clues: {
         across: {
-          2: { num: 2, clue: "Historic landmark built by Romans", answer: "HADRIANSWALL", row: 2, col: 0 },
-          3: { num: 3, clue: "Historic castle with stunning coastal views", answer: "BAMBURGH", row: 5, col: 2 },
-          4: { num: 4, clue: "Coastal town where the Tyne meets the sea", answer: "TYNEMOUTH", row: 7, col: 0 }
+          2: { num: 2, clue: "Historic landmark built by Romans", answer: "HADRIANSWALL", row: 5, col: 0 },
+          3: { num: 3, clue: "City famous for its castle and football team", answer: "NEWCASTLE", row: 8, col: 0 },
+          4: { num: 4, clue: "River flowing through the region", answer: "TYNE", row: 10, col: 0 }
         },
         down: {
-          1: { num: 1, clue: "Angel of the ___, famous Gateshead sculpture", answer: "ANGELFURTH", row: 0, col: 6 }
+          1: { num: 1, clue: "Historic castle with stunning coastal views", answer: "BAMBURGH", row: 0, col: 3 },
+          3: { num: 3, clue: "Town that was once the greatest coal port in the world", answer: "NEWCASTLE", row: 8, col: 0 }
         }
       }
     }
   };
+
 
   // Set up focus and timer
   useEffect(() => {
