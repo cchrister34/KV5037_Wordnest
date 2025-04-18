@@ -584,7 +584,7 @@ export default function Wordnest() {
     <div className={`flex flex-col h-screen items-center justify-center p-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-800'}`}>
       <h1 className="text-4xl font-bold mb-6">Hadrian's Crossword</h1>
       <p className="text-xl mb-8 text-center">A Northeast inspired crossword!</p>
-      
+  
       <div className="flex flex-col space-y-4 w-full max-w-md">
         <button 
           onClick={startGame} 
@@ -592,7 +592,18 @@ export default function Wordnest() {
         >
           Start Game
         </button>
-        
+        <button 
+          onClick={() => setPage('login')} 
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-xl shadow-lg transition duration-300"
+        >
+          Log In
+        </button>
+        <button 
+          onClick={() => setPage('signup')} 
+          className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg text-xl shadow-lg transition duration-300"
+        >
+          Sign Up
+        </button>
         <button 
           onClick={() => setPage('settings')} 
           className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300"
@@ -600,13 +611,84 @@ export default function Wordnest() {
           Settings
         </button>
       </div>
-      
+  
       <div className="mt-12 text-center">
         <p className="text-sm opacity-70">Explore the rich heritage of North East England</p>
         <p className="text-sm opacity-70">From Hadrian's Wall to the River Tyne</p>
       </div>
     </div>
   );
+
+const renderLoginPage = () => (
+  <div className={`flex flex-col h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-800'}`}>
+    <div className="p-4 border-b">
+      <button onClick={() => setPage('home')} className="flex items-center">
+        <span className="text-2xl mr-2">←</span> Back
+      </button>
+    </div>
+
+    <div className="flex-1 p-6">
+      <h1 className="text-3xl font-bold mb-8">Log In</h1>
+      
+      <div className="space-y-4">
+        <input
+          type="text"
+          placeholder="Username"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        />
+        <button
+          onClick={() => alert('Logged In!')} // Placeholder action
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg w-full"
+        >
+          Log In
+        </button>
+      </div>
+    </div>
+  </div>
+);
+
+const renderSignUpPage = () => (
+  <div className={`flex flex-col h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-800'}`}>
+    <div className="p-4 border-b">
+      <button onClick={() => setPage('home')} className="flex items-center">
+        <span className="text-2xl mr-2">←</span> Back
+      </button>
+    </div>
+
+    <div className="flex-1 p-6">
+      <h1 className="text-3xl font-bold mb-8">Sign Up</h1>
+      
+      <div className="space-y-4">
+        <input
+          type="text"
+          placeholder="Username"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full p-3 border border-gray-300 rounded-lg"
+        />
+        <button
+          onClick={() => alert('Signed Up!')} // Placeholder action
+          className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg w-full"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+);
 
   const renderSettingsPage = () => (
     <div className={`flex flex-col h-screen ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-800'}`}>
@@ -835,12 +917,14 @@ export default function Wordnest() {
     );
   };
 
-  // Main render
-  return (
-    <div className="h-screen w-screen">
-      {page === 'home' && renderHomePage()}
-      {page === 'settings' && renderSettingsPage()}
-      {page === 'game' && renderGamePage()}
-    </div>
-  );
+// Main render
+return (
+  <div className="h-screen w-screen">
+    {page === 'home' && renderHomePage()}
+    {page === 'login' && renderLoginPage()}
+    {page === 'signup' && renderSignUpPage()}
+    {page === 'settings' && renderSettingsPage()}
+    {page === 'game' && renderGamePage()}
+  </div>
+);
 }
